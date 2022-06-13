@@ -11,9 +11,27 @@ const Home: NextPage = () => {
       </Head>
 
       <main className="min-h-screen flex justify-center items-center">
-        <h1 className="text-3xl font-bold">
-          Welcome to <a className="text-blue-600" href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <section className='flex'>
+          <div className="flex-1">
+          <h1 className="text-4xl font-bold">RevisionStudy</h1>
+          <p className="text-xl">
+            A simple app to help you revise your vocabulary.
+          </p>
+          </div>
+          <div className="hero_img flex-1">
+
+          </div>
+        </section>
+        <section className='flex'>
+          <div className="">Features</div>
+          <div className="">Features</div>
+          <div className="">Features</div>
+          <div className="">Features</div>
+          <div className="">Features</div>
+        </section>
+        <div className="banner_sect">
+          We are 1% for something
+        </div>
       </main>
     </div>
   )
