@@ -33,12 +33,12 @@ export const AuthLayout: React.FC<Props> = ({ children }) => {
   return (
     <div className="">
       {/* main section */}
-      <div className="flex h-screen divide-x divide-zinc-200">
+      <div className="md:h-screen flex flex-col-reverse md:flex-row divide-y md:divide-y-0 md:divide-x divide-zinc-200">
         {/* banner section */}
-        <div className="w-1/2 bg-zinc-100 flex flex-col items-center justify-center">
-          <div className="flex flex-col">
-            <h3 className="text-xl font-bold">Revise. Study. Get Productive</h3>
-            <h2 className="text-8xl font-extrabold flex flex-col">
+        <div className="md:w-1/2 p-4 md:p-12 bg-zinc-100 flex flex-col items-center justify-center">
+          <div className="w-full flex flex-col">
+            <h3 className="text-sm md:text-base lg:text-xl font-bold">Revise. Study. Get Productive</h3>
+            <h2 className="text-6xl lg:text-8xl font-extrabold flex flex-col">
               <span
                 className={gradientHeadingClass(
                   "revision",
@@ -58,7 +58,7 @@ export const AuthLayout: React.FC<Props> = ({ children }) => {
                 Study
               </span>
             </h2>
-            <div className="mt-12 space-x-4 flex">
+            <div className="mt-12 flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4">
               <Button variant="auth" className="w-full">
                 Create an account
               </Button>
@@ -68,10 +68,11 @@ export const AuthLayout: React.FC<Props> = ({ children }) => {
             </div>
           </div>
         </div>
-        <div className="w-1/2">{children}</div>
+        {/* content section */}
+        <div className="md:w-1/2">{children}</div>
       </div>
       {/* footer section */}
-      <div className="border-t border-zinc-200 bg-zinc-100 py-12 px-36 text-zinc-600 text-sm">
+      <div className="border-t border-zinc-200 bg-zinc-100 p-4 md:p-12 text-zinc-600 text-sm">
         <h2 className="mb-4 text-xl text-zinc-800 font-bold cursor-pointer">
           Revision Study
         </h2>
