@@ -31,17 +31,17 @@ const styles = (
   className?: string
 ) =>
   clsx([
-    !override && ["py-3 px-4 rounded-md font-medium"],
-    variant == "auth" && [
+    !override && ["py-2.5 px-4 rounded-md font-medium"],
+    variant === "auth" && [
       outline
         ? [
-            "bg-transparent text-gray-800 border border-gray-300",
-            "hover:border-gray-800",
-          ]
+          "bg-transparent text-gray-900 border border-gray-300",
+          "hover:border-gray-900",
+        ]
         : [
-            "bg-gray-800 text-white border border-gray-800",
-            "hover:bg-transparent hover:text-gray-800",
-          ],
+          "bg-gray-900 text-white border border-gray-900",
+          "hover:bg-transparent hover:text-gray-900",
+        ],
     ],
     className,
   ]);
