@@ -36,12 +36,12 @@ const styles = (
     variant === "auth" && [
       outline
         ? [
-          "bg-transparent text-gray-900 border border-gray-300",
-          "hover:border-gray-900",
+          "bg-transparent text-black dark:text-white border border-zinc-300 dark:border-zinc-600",
+          "hover:border-zinc-900 dark:hover:border-zinc-300",
         ]
         : [
-          "bg-gray-900 text-white border border-gray-900",
-          "hover:bg-transparent hover:text-gray-900",
+          "bg-zinc-900 dark:bg-zinc-100 text-white dark:text-black border border-zinc-900 dark:border-zinc-300",
+          "hover:bg-transparent dark:hover:bg-transparent hover:text-black dark:hover:text-white",
         ],
     ],
     className,

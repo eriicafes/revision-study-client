@@ -16,9 +16,9 @@ export const AuthLayout: React.FC<Props> = ({ children }) => {
   return (
     <div className="">
       {/* main section */}
-      <div className="md:h-screen flex flex-col-reverse md:flex-row md:divide-x divide-zinc-200">
+      <div className="md:h-screen flex flex-col-reverse md:flex-row md:divide-x divide-zinc-200 dark:divide-zinc-800">
         {/* banner section */}
-        <div className="md:w-1/2 md:bg-zinc-50 border-t md:border-t-0 border-zinc-200">
+        <div className="md:w-1/2 md:bg-zinc-50 dark:md:bg-zinc-900 border-t md:border-t-0 border-zinc-200 dark:border-zinc-800">
           <div className="py-12 px-4 md:px-12 lg:px-16 xl:px-20 h-full flex flex-col justify-center">
             <div className="w-full max-w-md mx-auto md:mr-0">
               <h3 className="mb-2 lg:text-xl font-bold">
@@ -47,8 +47,8 @@ export const AuthLayout: React.FC<Props> = ({ children }) => {
         <div className="md:w-1/2">{children}</div>
       </div>
       {/* footer section */}
-      <div className="border-t border-zinc-200 md:bg-zinc-50 p-4 md:p-12 text-zinc-600 text-sm">
-        <h2 className="mb-4 text-lg text-zinc-800 font-bold cursor-pointer">
+      <div className="border-t border-zinc-200 dark:border-zinc-800 md:bg-zinc-50 dark:md:bg-zinc-900 p-4 md:p-12 text-zinc-600 dark:text-zinc-400 text-sm">
+        <h2 className="mb-4 text-lg text-zinc-800 dark:text-zinc-200  font-bold cursor-pointer">
           Revision Study
         </h2>
         <div className="flex items-center justify-between">
@@ -76,5 +76,5 @@ const gradientHeadingClass = (
     "pb-1.5",
     "bg-clip-text transition-colors duration-1000",
     gradient,
-    index === activeIndex ? "text-transparent" : "text-black",
+    index === activeIndex ? "text-transparent" : "text-black dark:text-white",
   ]);
