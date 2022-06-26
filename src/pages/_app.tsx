@@ -1,13 +1,16 @@
-import type { AppProps } from 'next/app'
-import { ConfigProvider } from '~/contexts/config'
-import '~/styles/globals.css'
+import { ThemeProvider } from "next-themes";
+import type { AppProps } from "next/app";
+import { ConfigProvider } from "~/contexts/config";
+import "~/styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ConfigProvider>
-      <Component {...pageProps} />
-    </ConfigProvider>
-  )
+    <ThemeProvider attribute="class" disableTransitionOnChange>
+      <ConfigProvider>
+        <Component {...pageProps} />
+      </ConfigProvider>
+    </ThemeProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;

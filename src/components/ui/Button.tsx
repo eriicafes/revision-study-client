@@ -16,9 +16,10 @@ export const Button: React.FC<Props> = ({
   override,
   outline,
   className,
+  ...props
 }) => {
   return (
-    <button className={styles(variant, override, outline, className)}>
+    <button className={styles(variant, override, outline, className)} {...props}>
       {children}
     </button>
   );
@@ -31,17 +32,17 @@ const styles = (
   className?: string
 ) =>
   clsx([
-    !override && ["py-3 px-4 rounded-md font-medium"],
-    variant == "auth" && [
+    !override && ["py-2.5 px-4 rounded-md font-medium"],
+    variant === "auth" && [
       outline
         ? [
-            "bg-transparent text-gray-800 border border-gray-300",
-            "hover:border-gray-800",
-          ]
+          "bg-transparent text-black dark:text-white border border-zinc-300 dark:border-zinc-600",
+          "hover:border-zinc-900 dark:hover:border-zinc-300",
+        ]
         : [
-            "bg-gray-800 text-white border border-gray-800",
-            "hover:bg-transparent hover:text-gray-800",
-          ],
+          "bg-zinc-900 dark:bg-zinc-100 text-white dark:text-black border border-zinc-900 dark:border-zinc-300",
+          "hover:bg-transparent dark:hover:bg-transparent hover:text-black dark:hover:text-white",
+        ],
     ],
     className,
   ]);
