@@ -16,9 +16,10 @@ export const Button: React.FC<Props> = ({
   override,
   outline,
   className,
+  ...props
 }) => {
   return (
-    <button className={styles(variant, override, outline, className)}>
+    <button className={styles(variant, override, outline, className)} {...props}>
       {children}
     </button>
   );
