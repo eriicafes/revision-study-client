@@ -1,11 +1,13 @@
 import clsx from "clsx";
 import React from "react";
+import { Spinner } from "../icons/Spinner";
 
 type Props = {
   children: React.ReactNode;
   variant?: Variant;
   override?: boolean;
   outline?: boolean;
+  loading?: boolean;
 } & React.ComponentPropsWithoutRef<"button">;
 
 type Variant = "primary" | "auth";
@@ -15,12 +17,13 @@ export const Button: React.FC<Props> = ({
   variant,
   override,
   outline,
+  loading,
   className,
   ...props
 }) => {
   return (
     <button className={styles(variant, override, outline, className)} {...props}>
-      {children}
+      {loading ? <Spinner className="w-6 h-6" /> : children}
     </button>
   );
 };
