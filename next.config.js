@@ -2,8 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   env: {
-    GITHUB_REPO_URL: process.env.GITHUB_REPO_URL
-  }
-}
+    API_URL: process.env.API_URL,
+    GITHUB_REPO_URL: process.env.GITHUB_REPO_URL,
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
